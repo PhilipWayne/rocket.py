@@ -31,7 +31,6 @@ class Rocket():
         self.moving_up = False
         self.moving_down = False
         self.rotate_left = False
-        self.rotate_right = False
         self.rocket_angle = 0
 
 
@@ -60,12 +59,8 @@ class Rocket():
         else:
             self.rocket_angle = (self.rocket_angle + 0) % 360
             self.screen.blit(self.rotated_image, self.new_rect)    
-        if self.rotate_right:
-            self.rocket_angle = (self.rocket_angle - 1) % 360 
-            self.screen.blit(self.rotated_image, self.new_rect) 
-        else:
-            self.rocket_angle = (self.rocket_angle + 0) % 360
-            self.screen.blit(self.rotated_image, self.new_rect)  
+           
+
 
     def check_events(self, event):
         """Respond to a key events."""
@@ -81,8 +76,6 @@ class Rocket():
                 self.moving_up = True 
             if event.key == pygame.K_LSHIFT:
                 self.rotate_left = True    
-            if event.key == pygame.K_RSHIFT:
-                self.rotate_right = True
 
         # Responses to the keyup events.
         if event.type == pygame.KEYUP:
@@ -95,9 +88,7 @@ class Rocket():
             if event.key == pygame.K_UP:
                 self.moving_up = False  
             if event.key == pygame.K_LSHIFT:
-                self.rotate_left = False  
-            if event.key == pygame.K_RSHIFT:
-                self.rotate_right = False          
+                self.rotate_left = False        
 
        
 
