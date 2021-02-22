@@ -3,7 +3,6 @@ import sys
 
 
 
-
 class Settings():
     """A class to store all settings for Rocket."""
     def __init__(self):
