@@ -1,5 +1,6 @@
 import pygame
 import sys
+from pygame.sprite import Sprite
 
 
 
@@ -98,7 +99,22 @@ class Rocket():
             if event.key == pygame.K_RSHIFT:
                 self.rotate_right = False          
 
-       
+
+class Bullet(Sprite):
+    """A class that stores bullet settings and manages bullets"""
+    def __init__(self, rocket_settings, screen, rocket):
+        
+        #Bullet settings.
+        self.bullet_width = 3
+        self.bullet_height = 5
+        self.bullet_color = 255, 204, 0
+        self.bullets_allowed = 3
+
+        #Create a bullet object at the ship's current position.
+        
+
+
+
 
 
 
