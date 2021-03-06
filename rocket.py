@@ -117,7 +117,6 @@ class Bullet(Sprite):
 
 
 
-
 pygame.init()
 rocket_settings = Settings()
 icon = pygame.image.load('/media/philip/9074-45DF/Python/rocket/images/rocket_icon.png')
